@@ -12,16 +12,11 @@
 </head>
 
 <body>
-  <header>
-    <h1>スケジュール管理アプリ</h1>
-  </header>
+  <%= render 'shared/header' %>
   <main>
     <%= yield %>
   </main>
-  <footer>
-    <h2>現在の日時：<%= Time.now.to_s(:datetime_jp) %></h2>
-    <h2><%= @sum_posts %></h2>
-  </footer>
+  <%= render 'shared/footer' %>
 </body>
 
 </html>

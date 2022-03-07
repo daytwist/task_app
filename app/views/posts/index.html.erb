@@ -1,8 +1,6 @@
 <h3>スケジュール一覧</h3>
 
-<% if flash[:notice] %>
-<p class="notice"><%= flash[:notice] %></p>
-<% end %>
+<%= render 'shared/message' %>
 
 <table>
   <thead>
@@ -32,7 +30,7 @@
         <%= link_to "確認", post %>
       </td>
       <td>
-        <%= link_to "編集", [:edit, post] %>
+        <%= link_to "編集", edit_post_path(post) %>
       </td>
       <td>
         <%= link_to "削除", post, method: :delete, data: {confirm: "本当に削除しますか？"} %>
@@ -42,4 +40,4 @@
   </tbody>
 </table>
 
-<p><%= link_to "スケジュール新規登録", :new_post %></p>
+<p><%= link_to "スケジュール新規登録", new_post_path %></p>
